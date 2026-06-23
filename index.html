@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="app-header">
+      <h1>Student Management System</h1>
+      <p class="subtitle">Add, view, search and manage student records.</p>
+    </header>
+
+    <div class="form-card">
+      <h2>Add Student</h2>
+
+      <form id="studentForm">
+        <input type="text" id="studentName" placeholder="Student name" required>
+
+        <input type="text" id="studentSubject" placeholder="Subject" required>
+
+        <input type="number" id="studentGrade" placeholder="Grade" min="1" max="100" required>
+
+        <button type="submit" id="submitButton">Add Student</button>
+      </form>
+    </div>
+
+    <div class="search-card">
+      <input type="text" id="searchInput" placeholder="Search student by name...">
+    </div>
+
+    <div class ="stats-container">
+        <div class = "stat-card">
+            <h3 id="totalStudents">0</h3>
+            <p>Total Students</p>
+        </div>
+
+        <div class = "stat-card">
+            <h3 id="averageGrade">0</h3>
+            <p>Average Grade</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="passedStudents">0</h3>
+            <p>Passed</p>
+        </div>
+
+        <div class ="stat-card">
+            <h3 id="failedStudents">0</h3>
+            <p>Failed</p>
+        </div>
+    </div>
+
+    <div class="table-card">
+      <h2>Student List</h2>
+        <button id="clearAllBtn" class="clear-btn">Clear All Students</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="studentTableBody">
+          <!-- students will appear here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
